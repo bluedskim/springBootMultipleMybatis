@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    hikari:
+      ozz:
+#        driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+        jdbc-url: jdbc:log4jdbc:mysql://host
+        username: username
+        password: password
+        driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+        connection-test-query: SELECT 1
+        minimum-idle: 1
+        maximum-pool-size: 10
+      ocms:
+#        driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+        jdbc-url: jdbc:log4jdbc:oracle:thin:@host
+        username: username
+        password: password
+        driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+        connection-test-query: SELECT 1 FROM DUAL
+        minimum-idle: 1
+        maximum-pool-size: 10
